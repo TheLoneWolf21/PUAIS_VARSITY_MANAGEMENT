@@ -1,110 +1,12 @@
-body {
+.stubody
+{
+    height: 83%;
     width: 100%;
-
+    margin-left: 5px;
+    border: 1px solid #d1d1d1;
+    overflow: hidden;   
 }
-
-.searchandsort {
-    margin-top: 4px;
-    width: 85%;
-    margin-left: 8%;
-}
-
-.searchstudent {
-    width: 20%;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 25px;
-    font-size: 12px;
-    background-color: white;
-    background-image: url('https://www.w3schools.com/howto/searchicon.png');
-    background-position: 10px 9px;
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-    float: right;
-}
-
-.searchstudent:focus {
-    width: 30%;
-}
-
-.dropdown {
-    margin-left: 2%;
-    float: left;
-}
-
-
-.mainpart
-{
-    margin-top: 20px;
-    width: 80%;
-    margin-left: 9%;
-}
-.mainpart ul
-{
-    list-style-type: none;
-}
-.mainpart ul li
-{
-    margin-top: 10px;
-    width: 100%;
-    height: 60px;
-    border: 1px solid grey;
-    border-radius: 4px;
-    background: #ebeaea;
-}
-.controldiv
+.container
 {
     width: 100%;
 }
-.userimg
-{
-
-    background-image: url("https://image.flaticon.com/icons/svg/701/701997.svg");
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    background-repeat: no-repeat;
-    float: left;
-    margin-left: 10px;
-}
-
-.NameAndID
-{
-    display: block;
-    float: left;
-    width: 180px;
-    margin-left: 10px;
-    
-}
-.name
-{
-    font-size: 23px;
-    color: #3c3c3c;
-    font-family: sans-serif,serif;
-}
-.ID
-{
-    font-size: 12px;
-    color: #5c5e5f;
-}
-.status
-{
-    color:#3c3c3c;
-    font-size: 15px;
-    float: left;
-    margin-top: 5px;
-    width: 250px;
-    text-align: center;
-}
-.viewoption 
-{
-    margin-left: 780px;
-}
-.viewoption button
-{
-    text-align: center;
-    
-}
-

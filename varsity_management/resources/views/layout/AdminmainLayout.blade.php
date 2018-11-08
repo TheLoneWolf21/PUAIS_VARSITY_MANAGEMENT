@@ -9,6 +9,8 @@
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.2/css/all.css' integrity='sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns' crossorigin='anonymous'>
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.2/css/all.css' integrity='sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns' crossorigin='anonymous'>
     <link rel="stylesheet" type="text/css" href="css/mainLayout.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 
 </head>
 
@@ -18,44 +20,41 @@
         <section class="topbar">
             <!-- TOPBAR STARTS HERE -->
             <div class="topb">
-                <div class="logo">
+                <!--  <div class="logo">
                     <p><b>XYZ</b></p>
-                </div>
-                <div class="options">
-                    <nav>
-                        <div class="notifications">
-                            <div class="iconAndbubble">
-                                <div class="far fa-bell"></div>
-                                <span class="notificationBubble">9</span>
-                            </div>
-                            <ul class="topul">
-                                <li>
-                                    <span class="icon"></span>
-                                    <span class="text">Someone Liked your post</span>
-                                </li>
-                                <li>
-                                    <span class="icon"></span>
-                                    <span class="text">Someone Liked you post</span>
-                                </li>
-                                <li>
-                                    <span class="icon"></span>
-                                    <span class="text">Someone Liked you post</span>
-                                </li>
-                                <li>
-                                    <span class="icon"></span>
-                                    <span class="text">Someone Liked you post</span>
-                                </li>
-                                <li>
-                                    <span class="icon"></span>
-                                    <span class="text">Someone Liked you post</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="users">Admin</div>
-                        <div class="fa fa-power-off"></div>
-                    </nav>
-                </div>
+                </div> -->
             </div>
+            <ul class="navigate">
+                <li class="notifications"><i class="far fa-bell" id="bell"></i><span class="notificationBubble">9</span>
+                    <ul class="topul">
+                        <li>
+                            <span class="icon"></span>
+                            <span class="text">Someone Liked your post</span>
+                        </li>
+                        <li>
+                            <span class="icon"></span>
+                            <span class="text">Someone Liked you post</span>
+                        </li>
+                        <li>
+                            <span class="icon"></span>
+                            <span class="text">Someone Liked you post</span>
+                        </li>
+                        <li>
+                            <span class="icon"></span>
+                            <span class="text">Someone Liked you post</span>
+                        </li>
+                        <li>
+                            <span class="icon"></span>
+                            <span class="text">Someone Liked you post</span>
+                        </li>
+                    </ul>
+                </li>
+                <li style="margin-left: 4px;"><i class="fas fa-user"></i>
+                </li>
+                <li><i class="fa fa-power-off" id="poweroff"></i></li>
+            </ul>
+
+
         </section>
 
         <!-- TOPBAR ENDS HERE -->
@@ -174,7 +173,10 @@
             <!-- SIDEBAR CONTENTS ENDS HERE -->
             <div class="Rightcontainer">
                 <!-- Right Side content starts here -->
-                @yield('rightcontent')
+                <div class="spacer"></div>
+                <div>
+                    @yield('rightcontent')
+                </div>
 
                 <!-- Right Side content ends here -->
             </div>

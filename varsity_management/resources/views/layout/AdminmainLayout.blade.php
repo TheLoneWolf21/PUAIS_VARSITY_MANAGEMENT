@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>ADMIN | PUAIS</title>
+    <title>@yield('title')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Wahid Sakib">
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
@@ -78,110 +78,95 @@
                 <div class="optionsSide">
                     <ul class="sideul">
                         <li onclick="location.href='{{ url('admin') }}'" class="{{ Request::is('admin') ? 'active' : '' }}">
-                            <div class="logoplustext">
-                                <div class="fab fa-dashcube"></div>
 
-                                <div class="icontext">Dashboard</div>
-                            </div>
+                            <i class="fab fa-dashcube"></i><span class="text">Dashboard</span>
+
+
+
                         </li>
                         <li onclick="location.href='{{ url('adminstu') }}'" class="{{ Request::is('adminstu') ? 'active' : '' }}">
-                            <div class="logoplustext">
-                                <div class="fas fa-user"></div>
 
-                                <div class="icontext">Student</div>
-                            </div>
+                            <i class="fas fa-user"></i><span class="text">Student</span>
+
                         </li>
                         <li onclick="location.href='{{ url('admincourse') }}'" class="{{ Request::is('admincourse') ? 'active' : '' }}">
-                            <div class="logoplustext">
-                                <div class="fab fa-discourse"></div>
-                                <div class="icontext">Course</div>
-                            </div>
+
+                            <i class="fab fa-discourse"></i> <span class="text">Course</span>
+
                         </li>
                         <li onclick="location.href='{{ url('adminteacher') }}'" class="{{ Request::is('adminteacher') ? 'active' : '' }}">
-                            <div class="logoplustext">
-                                <div class="fas fa-chalkboard-teacher"></div>
-                                <div class="icontext">Teacher</div>
-                            </div>
+                            <i class="fas fa-chalkboard-teacher"></i><span class="text">Teacher</span>
                         </li>
                         <li onclick="location.href='{{ url('adminroutine') }}'" class="{{ Request::is('adminroutine') ? 'active' : '' }}">
-                            <div class="logoplustext">
-                                <div class="fas fa-object-group"></div>
-                                <div class="icontext">Routine</div>
-                            </div>
+                            <i class="fas fa-object-group"></i><span class="text">Routine</span>
+
                         </li>
                         <li onclick="location.href='{{ url('adminresult') }}'" class="{{ Request::is('adminresult') ? 'active' : '' }}">
-                            <div class="logoplustext">
-                                <div class="fas fa-clipboard"></div>
-                                <div class="icontext">Result</div>
-                            </div>
+                            <i class="fas fa-clipboard"></i><span class="text">Result</span>
+
                         </li>
                         <li onclick="location.href='{{ url('adminlibrary') }}'" class="{{ Request::is('adminlibrary') ? 'active' : '' }}">
-                            <div class="logoplustext">
-                                <div class="fas fa-book"></div>
-                                <div class="icontext">Library</div>
-                            </div>
+                            <i class="fas fa-book"></i><span class="text">Library</span>
+
                         </li>
                         <li onclick="location.href='{{ url('admincoursefee') }}'" class="{{ Request::is('admincoursefee') ? 'active' : '' }}">
-                            <div class="logoplustext">
-                                <div class="fas fa-dollar-sign"></div>
-                                <div class="icontext">Course Fee</div>
-                            </div>
+                            <i class="fas fa-dollar-sign"></i><span class="text">Course Fee</span>
+
                         </li>
                         <li onclick="location.href='{{ url('adminsection') }}'" class="{{ Request::is('adminsection') ? 'active' : '' }}">
-                            <div class="logoplustext">
-                                <div class="fas fa-list"></div>
-                                <div class="icontext">Section</div>
-                            </div>
+
+                            <i class="fas fa-list"></i><span class="text">Section</span>
+
+
                         </li>
                         <li onclick="location.href='{{ url('adminmail') }}'" class="{{ Request::is('adminmail') ? 'active' : '' }}">
-                            <div class="logoplustext">
-                                <div class="fas fa-mail-bulk"></div>
-                                <div class="icontext">Mail/SMS</div>
-                            </div>
+
+                            <i class="fas fa-mail-bulk"></i> <span class="text">Mail/SMS</span>
+
+
                         </li>
                         <li onclick="location.href='{{ url('adminnotice') }}'" class="{{ Request::is('adminnotice') ? 'active' : '' }}">
-                            <div class="logoplustext">
-                                <div class="fas fa-bell"></div>
-                                <div class="icontext">Notice</div>
-                            </div>
+
+                            <i class="fas fa-bell"></i><span class="text">Notice</span>
+
+
                         </li>
                         <li onclick="location.href='{{ url('adminsetting') }}'" class="{{ Request::is('adminsetting') ? 'active' : '' }}">
-                            <div class="logoplustext">
-                                <div class="	fas fa-cogs"></div>
-                                <div class="icontext">Setting</div>
-                            </div>
+
+                            <i class="	fas fa-cogs"></i><span class="text">Setting</span>
+
+
                         </li>
-                        <li  onclick="location.href='{{ url('stuenrollment') }}'" class="{{ Request::is('stuenrollment') ? 'active' : '' }}">
-                            <div class="logoplustext">
-                                <div class="fas fa-plus"></div>
-                                <div class="icontext">Enrollment</div>
-                            </div>
+                        <li onclick="location.href='{{ url('stuenrollment') }}'" class="{{ Request::is('stuenrollment') ? 'active' : '' }}">
+
+                            <i class="fas fa-plus"></i><span class="text">Enrollment</span>
+
                         </li>
                         <li onclick="location.href='{{ url('stuadvisor') }}'" class="{{ Request::is('stuadvisor') ? 'active' : '' }}">
-                            <div class="logoplustext">
-                                <div class="fab fa-tripadvisor"></div>
-                                <div class="icontext">Advisor</div>
-                            </div>
+
+                            <i class="fab fa-tripadvisor"></i><span class="text">Advisor</span>
+
+
                         </li>
                         <li onclick="location.href='{{ url('teacherrequestsubject') }}'" class="{{ Request::is('teacherrequestsubject') ? 'active' : '' }}">
-                            <div class="logoplustext">
-                                <div class="fas fa-book-open"></div>
-                                <div class="icontext">Request Subject</div>
-                            </div>
+
+                            <i class="fas fa-book-open"></i><span class="text">Request Subject</span>
+
+
                         </li>
                         <li onclick="location.href='{{ url('teacherpendingrequest') }}'" class="{{ Request::is('teacherpendingrequest') ? 'active' : '' }}">
-                            <div class="logoplustext">
-                                <div class="fas fa-pen-alt"></div>
-                                <div class="icontext">Pending Request</div>
-                            </div>
+
+                            <i class="fas fa-pen-alt"></i><span class="text">Pending Request</span>
+
+
                         </li>
                         <li onclick="location.href='{{ url('stupayment') }}'" class="{{ Request::is('stupayment') ? 'active' : '' }}">
-                            <div class="logoplustext">
-                                <div class="fas fa-credit-card"></div>
-                                <div class="icontext">Payment</div>
-                            </div>
+
+                            <i class="fas fa-credit-card"></i><span class="text">Payment</span>
+
+
                         </li>
-                        
+
 
                     </ul>
                 </div>

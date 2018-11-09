@@ -23,7 +23,10 @@ Admin | Student
 
 <div class="stubody">
     <div class="container">
-        <h3 style="margin: 0">Section: C6B</h3>
+       
+        <h3 style="margin: 0;float: left;">Section: C6B</h3>
+        <h4 style="margin: 0;float: right; margin-top: 8px;">Total student: 65</h4>
+        <br />
         <br />
         <ul class="nav nav-tabs">
 
@@ -39,6 +42,7 @@ Admin | Student
             <li><a href="#">Retake</a></li>
             <li><a href="#">Recourse</a></li>
         </ul>
+
     </div>
 
 

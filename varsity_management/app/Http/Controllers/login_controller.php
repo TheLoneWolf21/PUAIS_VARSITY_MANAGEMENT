@@ -16,18 +16,48 @@ class login_controller extends Controller
     {
         return view('Admin.AdminDash');
     }
+    // Admin Student View Control
     public function adminstuview()
     {
-        return view('Admin.AdminStudent');
+        return view('Admin.Adminstudent.adminstu_all');
     }
+        public function adminstu_retake()
+    {
+        return view('Admin.Adminstudent.adminstu_retake');
+    }
+        public function adminstu_recourse()
+    {
+        return view('Admin.Adminstudent.adminstu_recourse');
+    }
+        public function adminstu_regular()
+    {
+        return view('Admin.Adminstudent.adminstu_regular');
+    }
+    //Admin Student View Control End
+    
     public function admincourseview()
     {
         return view('Admin.AdminCourse');
     }
+    
+    //Admin Teahcer view 
     public function adminteacherview()
     {
-        return view('Admin.AdminTeacher');
+        return view('Admin.adminteacher.adminteacher_all');
     }
+        public function adminteacher_dean()
+    {
+        return view('Admin.adminteacher.adminteacher_dean');
+    }
+        public function adminteacher_professors()
+    {
+        return view('Admin.adminteacher.adminteacher_professors');
+    }
+        public function adminteacher_lecturers()
+    {
+        return view('Admin.adminteacher.adminteacher_lecturers');
+    }
+    //Admin Teahcer view end
     public function adminroutineview()
     {
         return view('Admin.AdminRoutine');

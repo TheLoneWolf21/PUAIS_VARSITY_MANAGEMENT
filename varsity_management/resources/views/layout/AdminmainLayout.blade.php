@@ -64,10 +64,11 @@
                     <h2>PUAIS</h2>
                 </center>
                 <div class="topinfo">
-                    <div class="far fa-user" style="margin-left: 45%; color: aliceblue;"></div>
+                    <!--     <div class="far fa-user" style="margin-left: 45%; color: aliceblue;"></div>
                     <br>
                     <p class="user">Admin</p>
-
+                -->
+                    <h3 style="color: aliceblue;">PUAIS</h3>
                 </div>
                 <!-- options with logo -->
                 <div class="optionsSide">

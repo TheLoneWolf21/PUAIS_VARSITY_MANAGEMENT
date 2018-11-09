@@ -23,7 +23,7 @@ Admin | Student
 
 <div class="stubody">
     <div class="container">
-       
+
         <h3 style="margin: 0;float: left;">Section: C6B</h3>
         <h4 style="margin: 0;float: right; margin-top: 8px;">Total student: 65</h4>
         <br />
@@ -54,7 +54,7 @@ Admin | Student
         <div class="row">
 
 
-            <div class="col-md-12" >
+            <div class="col-md-12">
                 <div class="table-responsive" style="overflow-y:auto ; height: 73%;">
 
 
@@ -66,9 +66,9 @@ Admin | Student
                             <th></th>
                             <th>First Name</th>
                             <th>Last Name</th>
-                            <th>Address</th>
-                            <th>Email</th>
-                            <th>Status</th>
+                            <th>Advisor</th>
+                            <th>ID</th>
+                            <th>Type</th>
                             <th>Contact</th>
                             <th>Edit</th>
 
@@ -81,8 +81,8 @@ Admin | Student
                                 <td><i class="fas fa-user" style="border-radius: 50%;"></i></td>
                                 <td>Mohsin</td>
                                 <td>Irshad</td>
-                                <td>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</td>
-                                <td>isometric.mohsin@gmail.com</td>
+                                <td>Ibrahim Khalil</td>
+                                <td>1502910201044</td>
                                 <td>Regular</td>
                                 <td>+923335586757</td>
                                 <td>
@@ -98,45 +98,8 @@ Admin | Student
                                 <td><i class="fas fa-user" style="border-radius: 50%;"></i></td>
                                 <td>Mohsin</td>
                                 <td>Irshad</td>
-                                <td>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</td>
-                                <td>isometric.mohsin@gmail.com</td>
-                                <td>Regular</td>
-                                <td>+923335586757</td>
-                                <td>
-                                    <p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button></p>
-                                </td>
-                                <td>
-                                    <p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span></button></p>
-                                </td>
-                            </tr>
-
-
-                            <tr>
-                                <td><input type="checkbox" class="checkthis" /></td>
-                                <td><i class="fas fa-user" style="border-radius: 50%;"></i></td>
-                                <td>Mohsin</td>
-                                <td>Irshad</td>
-                                <td>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</td>
-                                <td>isometric.mohsin@gmail.com</td>
-                                <td>Regular</td>
-                                <td>+923335586757</td>
-                                <td>
-                                    <p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button></p>
-                                </td>
-                                <td>
-                                    <p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span></button></p>
-                                </td>
-                            </tr>
-
-
-
-                            <tr>
-                                <td><input type="checkbox" class="checkthis" /></td>
-                                <td><i class="fas fa-user" style="border-radius: 50%;"></i></td>
-                                <td>Mohsin</td>
-                                <td>Irshad</td>
-                                <td>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</td>
-                                <td>isometric.mohsin@gmail.com</td>
+                                <td>Ibrahim Khalil</td>
+                                <td>1502910201044</td>
                                 <td>Regular</td>
                                 <td>+923335586757</td>
                                 <td>
@@ -153,8 +116,8 @@ Admin | Student
                                 <td><i class="fas fa-user" style="border-radius: 50%;"></i></td>
                                 <td>Mohsin</td>
                                 <td>Irshad</td>
-                                <td>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</td>
-                                <td>isometric.mohsin@gmail.com</td>
+                                <td>Ibrahim Khalil</td>
+                                <td>1502910201044</td>
                                 <td>Regular</td>
                                 <td>+923335586757</td>
                                 <td>
@@ -164,14 +127,16 @@ Admin | Student
                                     <p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span></button></p>
                                 </td>
                             </tr>
-                            
+
+
+
                             <tr>
                                 <td><input type="checkbox" class="checkthis" /></td>
                                 <td><i class="fas fa-user" style="border-radius: 50%;"></i></td>
                                 <td>Mohsin</td>
                                 <td>Irshad</td>
-                                <td>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</td>
-                                <td>isometric.mohsin@gmail.com</td>
+                                <td>Ibrahim Khalil</td>
+                                <td>1502910201044</td>
                                 <td>Regular</td>
                                 <td>+923335586757</td>
                                 <td>
@@ -181,14 +146,49 @@ Admin | Student
                                     <p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span></button></p>
                                 </td>
                             </tr>
-                            
+
+
                             <tr>
                                 <td><input type="checkbox" class="checkthis" /></td>
                                 <td><i class="fas fa-user" style="border-radius: 50%;"></i></td>
                                 <td>Mohsin</td>
                                 <td>Irshad</td>
-                                <td>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</td>
-                                <td>isometric.mohsin@gmail.com</td>
+                                <td>Ibrahim Khalil</td>
+                                <td>1502910201044</td>
+                                <td>Regular</td>
+                                <td>+923335586757</td>
+                                <td>
+                                    <p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button></p>
+                                </td>
+                                <td>
+                                    <p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span></button></p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" class="checkthis" /></td>
+                                <td><i class="fas fa-user" style="border-radius: 50%;"></i></td>
+                                <td>Mohsin</td>
+                                <td>Irshad</td>
+                                <td>Ibrahim Khalil</td>
+                                <td>1502910201044</td>
+                                <td>Regular</td>
+                                <td>+923335586757</td>
+                                <td>
+                                    <p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button></p>
+                                </td>
+                                <td>
+                                    <p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span></button></p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" class="checkthis" /></td>
+                                <td><i class="fas fa-user" style="border-radius: 50%;"></i></td>
+                                <td>Mohsin</td>
+                                <td>Irshad</td>
+                                <td>Ibrahim Khalil</td>
+                                <td>1502910201044</td>
                                 <td>Regular</td>
                                 <td>+923335586757</td>
                                 <td>
@@ -206,19 +206,19 @@ Admin | Student
                         </tbody>
 
                     </table>
-                    </div>
-                    <div class="clearfix"></div>
-                    <ul class="pagination pull-left">
-                        <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left" style="height: 20px;"></span></a></li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-chevron-right" style="height: 20px;"></span></a></li>
-                    </ul>
+                </div>
+                <div class="clearfix"></div>
+                <ul class="pagination pull-left">
+                    <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left" style="height: 20px;"></span></a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-chevron-right" style="height: 20px;"></span></a></li>
+                </ul>
 
-                
+
 
             </div>
         </div>

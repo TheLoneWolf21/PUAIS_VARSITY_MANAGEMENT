@@ -36,7 +36,12 @@ Route::get('/adminteacher_lecturers','login_controller@adminteacher_lecturers');
 Route::get('/adminroutine','login_controller@adminroutineview');
 Route::get('/adminresult','login_controller@adminresultview');
 Route::get('/adminlibrary','login_controller@adminlibraryview');
+
+//Admin Section 
 Route::get('/adminsection','login_controller@adminsectionview');
+Route::get('/adminsection_edit','login_controller@adminsection_edit');
+Route::get('/adminsection_advisor','login_controller@adminsection_advisor');
+//Admin Section end
 Route::get('/adminmail','login_controller@adminmailview');
 Route::get('/adminnotice','login_controller@adminnoticeview');
 Route::get('/adminsetting','login_controller@adminsettingview');

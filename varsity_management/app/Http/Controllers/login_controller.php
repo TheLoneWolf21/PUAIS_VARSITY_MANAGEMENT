@@ -70,10 +70,21 @@ class login_controller extends Controller
     {
         return view('Admin.AdminLibrary');
     }
+    
+    //Admin Section
     public function adminsectionview()
     {
-        return view('Admin.AdminSection');
+        return view('Admin.adminsection.adminsection_overview');
     }
+    public function adminsection_edit()
+    {
+        return view('Admin.adminsection.adminsection_edit');
+    }
+    public function adminsection_advisor()
+    {
+        return view('Admin.adminsection.adminsection_advisor');
+    }
+    //Admin Section End
     public function adminmailview()
     {
         return view('Admin.AdminMail');
@@ -87,4 +98,3 @@ class login_controller extends Controller
         return view('Admin.AdminSetting');
     }
 }
-

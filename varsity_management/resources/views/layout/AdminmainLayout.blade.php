@@ -109,7 +109,7 @@
                             <i class="fas fa-dollar-sign"></i><span class="text">Course Fee</span>
 
                         </li>
-                        <li onclick="location.href='{{ url('adminsection') }}'" class="{{ Request::is('adminsection') ? 'active' : '' }}">
+                        <li onclick="location.href='{{ url('adminsection') }}'" class="{{ Request::is('adminsection') || Request::is('adminsection_edit') || Request::is('adminsection_advisor') ? 'active' : '' }}">
 
                             <i class="fas fa-list"></i><span class="text">Section</span>
 

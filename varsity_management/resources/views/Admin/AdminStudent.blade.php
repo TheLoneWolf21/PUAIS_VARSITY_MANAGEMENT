@@ -25,7 +25,7 @@ Admin | Student
     <div class="container">
 
         <h3 style="margin: 0;float: left;">Section: C6B</h3>
-        <h4 style="margin: 0;float: right; margin-top: 8px;">Total student: 65</h4>
+        <ul style="margin: 0;float: right; "><li>Regular: 47</li>    <li>Retake: 5</li>   <li>Recourse: 2</li> <li>Total: 54</li></ul>
         <br />
         <br />
         <ul class="nav nav-tabs">
@@ -39,6 +39,7 @@ Admin | Student
                 </ul>
             </li>
             <li class="active"><a href="#">All Student</a></li>
+            <li><a href="#">Regular</a></li>
             <li><a href="#">Retake</a></li>
             <li><a href="#">Recourse</a></li>
         </ul>

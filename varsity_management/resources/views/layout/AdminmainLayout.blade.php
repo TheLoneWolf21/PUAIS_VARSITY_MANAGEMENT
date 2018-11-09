@@ -80,7 +80,7 @@
 
 
                         </li>
-                        <li onclick="location.href='{{ url('adminstu') }}'" class="{{ Request::is('adminstu') ? 'active' : '' }}">
+                        <li onclick="location.href='{{ url('adminstu') }}'" class="{{ Request::is('adminstu') || Request::is('adminstu_retake') || Request::is('adminstu_recourse') || Request::is('adminstu_regular')? 'active' : '' }}">
 
                             <i class="fas fa-user"></i><span class="text">Student</span>
 
@@ -90,7 +90,7 @@
                             <i class="fab fa-discourse"></i> <span class="text">Course</span>
 
                         </li>
-                        <li onclick="location.href='{{ url('adminteacher') }}'" class="{{ Request::is('adminteacher') ? 'active' : '' }}">
+                        <li onclick="location.href='{{ url('adminteacher') }}'" class="{{ Request::is('adminteacher') || Request::is('adminteacher_dean') || Request::is('adminteacher_professors') || Request::is('adminteacher_lecturers')  ? 'active' : '' }}">
                             <i class="fas fa-chalkboard-teacher"></i><span class="text">Teacher</span>
                         </li>
                         <li onclick="location.href='{{ url('adminroutine') }}'" class="{{ Request::is('adminroutine') ? 'active' : '' }}">

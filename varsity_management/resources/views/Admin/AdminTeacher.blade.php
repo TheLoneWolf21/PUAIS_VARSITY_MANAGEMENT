@@ -23,7 +23,7 @@ Admin | Teacher
 
 <div class="teacherbody">
     <div class="container">
-        <ul style="float: right;margin: 0;"><li>Professor: 15</li>  <li>Lecturers: 25</li>  <li>Total: 40</li></ul>
+        <ul style="float: right;margin: 0;"><li>Professor: 15</li>  <li>Lecturer: 25</li>  <li>Total: 40</li></ul>
         <ul class="nav nav-tabs">
 
             <li class="{{ Request::is('adminteacher') ? 'active' : '' }}"><a href="/adminteacher">All faculty member</a></li>

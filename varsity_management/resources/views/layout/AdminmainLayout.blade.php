@@ -19,11 +19,7 @@
     <div class="wbody">
         <section class="topbar">
             <!-- TOPBAR STARTS HERE -->
-            <div class="topb">
-                <!--  <div class="logo">
-                    <p><b>XYZ</b></p>
-                </div> -->
-            </div>
+
             <ul class="navigate">
                 <li class="notifications"><i class="far fa-bell" id="bell"></i><span class="notificationBubble">9</span>
                     <ul class="topul">

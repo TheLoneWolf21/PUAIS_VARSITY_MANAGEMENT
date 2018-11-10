@@ -93,6 +93,9 @@
                         <li onclick="location.href='{{ url('adminteacher') }}'" class="{{ Request::is('adminteacher') || Request::is('adminteacher_dean') || Request::is('adminteacher_professors') || Request::is('adminteacher_lecturers')  ? 'active' : '' }}">
                             <i class="fas fa-chalkboard-teacher"></i><span class="text">Teacher</span>
                         </li>
+                        <li onclick="location.href='{{ url('adminsession') }}'" class="{{ Request::is('adminsession') || Request::is('adminsession_edit') ? 'active' : '' }}">
+                            <i class="fas fa-adjust"></i><span class="text">Session</span>
+                        </li>
                         <li onclick="location.href='{{ url('adminroutine') }}'" class="{{ Request::is('adminroutine') ? 'active' : '' }}">
                             <i class="fas fa-object-group"></i><span class="text">Routine</span>
 

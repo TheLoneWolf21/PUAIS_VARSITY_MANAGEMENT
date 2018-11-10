@@ -1,47 +1,28 @@
 @extends('layout.AdminmainLayout')
 @section('title')
-Admin | Result
+Admin | Session
 @endsection
 @section('rightcontent')
-<link rel="stylesheet" href="/css/adminresultview.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<link rel="stylesheet" href="/css/adminsession.css">
 <center>
-    <p style="font-family: Actor;font-size: 35px;margin: 0;">Result</p>
+    <p style="font-family: Actor;font-size: 35px;margin: 0;">Session</p>
 </center>
 
-<div class="resultbody">
+<div class="sessionbody">
     <div class="container">
-        <h3 style="margin: 0;padding: 0; float: left;">Section: C6B</h3>
         <ul style="margin: 0;float: right;padding: 0; ">
-            <li>Total student : 67</li>
+            <li>Ongoing session:    January 2018</li>
+            <li>Total student enrolled: 687</li>
         </ul>
         <br />
-        <br />
-
+   
         <ul class="nav nav-tabs">
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Section: <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">C6A</a></li>
-                    <li><a href="#">C6B</a></li>
-                    <li><a href="#">C6C</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Session <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">January 2018</a></li>
-                    <li><a href="#">June 2018</a></li>
-                    <li><a href="#">January 2017</a></li>
-                </ul>
-            </li>
+
+            <li class="{{ Request::is('adminsession') ? 'active' : '' }}"><a href="/adminsession">Overview</a></li>
+            <li class="{{ Request::is('adminsession_edit') ? 'active' : '' }}"><a href="/adminsession_edit">Edit</a></li>
+            
         </ul>
     </div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 
@@ -50,21 +31,12 @@ Admin | Result
 
 
             <div class="col-md-12">
-                @yield('adminresult_data')
+                @yield('adminsession_data')
                 <!-- YIELDING DATA -->
 
 
-
-                <div class="clearfix"></div>
-                <ul class="pagination pull-left">
-                    <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left" style="height: 20px;"></span></a></li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-chevron-right" style="height: 20px;"></span></a></li>
-                </ul>
+                @yield('bottomnav')
+                
 
 
 
@@ -145,8 +117,5 @@ Admin | Result
         });
 
     </script>
-
-    <!-- Student Table ends here -->
 </div>
-
 @endsection

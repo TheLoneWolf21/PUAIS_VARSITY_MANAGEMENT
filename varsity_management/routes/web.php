@@ -37,6 +37,10 @@ Route::get('/adminroutine','login_controller@adminroutineview');
 //Admin Result
 Route::get('/adminresult','login_controller@adminresultview');
 //ADmin Result end
+//Admin Session
+Route::get('/adminsession','login_controller@adminsessionview');
+Route::get('/adminsession_edit','login_controller@adminsession_edit');
+//Admin Session end
 Route::get('/adminlibrary','login_controller@adminlibraryview');
 //Admin Section
 Route::get('/adminsection','login_controller@adminsectionview');

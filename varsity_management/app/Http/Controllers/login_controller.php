@@ -68,6 +68,17 @@ class login_controller extends Controller
         return view('Admin.adminresult.adminresult_all');
     }
     //Admin Result End
+    //Admin session
+       public function adminsessionview()
+    {
+        return view('Admin.adminsession.adminsession_overview');
+    }
+           public function adminsession_edit()
+    {
+        return view('Admin.adminsession.adminsession_edit');
+    }
+    //ADmin session end
+    
     public function adminlibraryview()
     {
         return view('Admin.AdminLibrary');

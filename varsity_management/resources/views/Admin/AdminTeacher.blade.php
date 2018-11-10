@@ -28,6 +28,7 @@ Admin | Teacher
             <li>Lecturer: 25</li>
             <li>Total: 40</li>
         </ul>
+        <br />
         <ul class="nav nav-tabs">
 
             <li class="{{ Request::is('adminteacher') ? 'active' : '' }}"><a href="/adminteacher">All faculty member</a></li>

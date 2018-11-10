@@ -34,7 +34,9 @@ Route::get('/adminteacher_lecturers','login_controller@adminteacher_lecturers');
 
 //Admin Teacher End
 Route::get('/adminroutine','login_controller@adminroutineview');
+//Admin Result
 Route::get('/adminresult','login_controller@adminresultview');
+//ADmin Result end
 Route::get('/adminlibrary','login_controller@adminlibraryview');
 
 //Admin Section 

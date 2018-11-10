@@ -62,10 +62,12 @@ class login_controller extends Controller
     {
         return view('Admin.AdminRoutine');
     }
+    //Admin Result
     public function adminresultview()
     {
-        return view('Admin.AdminResult');
+        return view('Admin.adminresult.adminresult_all');
     }
+    //Admin Result End
     public function adminlibraryview()
     {
         return view('Admin.AdminLibrary');

@@ -15,7 +15,7 @@ Admin | Result
 
 <div class="resultbody">
     <div class="container">
-        <h3 style="margin: 0;padding: 0; float: left;">Showing data for session: 2018-19 january</h3>
+        <h3 style="margin: 0;padding: 0; float: left;">Session: 2018-19 january <span class="sec" style="color:#6d6d6d;">Section: C6B</span></h3>
         <ul style="margin: 0;float: right;padding: 0; ">
             <li>Ongoing session: 2018-19 January</li>
             <li>Total student enrolled: 687</li>

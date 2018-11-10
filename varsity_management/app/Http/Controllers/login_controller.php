@@ -37,7 +37,7 @@ class login_controller extends Controller
     
     public function admincourseview()
     {
-        return view('Admin.AdminCourse');
+        return view('Admin.admincourse.admincourse_all');
     }
     
     //Admin Teahcer view 

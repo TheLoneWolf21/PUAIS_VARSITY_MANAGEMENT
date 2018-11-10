@@ -25,7 +25,9 @@ Route::get('/adminstu_recourse','login_controller@adminstu_recourse');
 Route::get('/adminstu_regular','login_controller@adminstu_regular');
 
 //Admin Student End
+//Admin Course
 Route::get('/admincourse','login_controller@admincourseview');
+//Admin Course end
 //Admin Teacher
 Route::get('/adminteacher','login_controller@adminteacherview');
 Route::get('/adminteacher_dean','login_controller@adminteacher_dean');

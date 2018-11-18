@@ -43,7 +43,10 @@ Route::get('/adminresult','login_controller@adminresultview');
 Route::get('/adminsession','login_controller@adminsessionview');
 Route::get('/adminsession_edit','login_controller@adminsession_edit');
 //Admin Session end
+//Admin Library
 Route::get('/adminlibrary','login_controller@adminlibraryview');
+Route::get('/adminlibrary_add','login_controller@adminlibrary_add_book');
+//Admin Library end
 //Admin Section
 Route::get('/adminsection','login_controller@adminsectionview');
 Route::get('/adminsection_edit','login_controller@adminsection_edit');

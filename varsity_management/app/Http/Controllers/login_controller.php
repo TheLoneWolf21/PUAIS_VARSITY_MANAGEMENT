@@ -79,11 +79,16 @@ class login_controller extends Controller
     }
     //ADmin session end
     
+    //Admin Library
     public function adminlibraryview()
     {
-        return view('Admin.AdminLibrary');
+        return view('Admin.adminlibrary.adminlibrary_books');
     }
-    
+        public function adminlibrary_add_book()
+    {
+        return view('Admin.adminlibrary.adminlibrary_add_book');
+    }
+    //ADmin Library end
     //Admin Section
     public function adminsectionview()
     {

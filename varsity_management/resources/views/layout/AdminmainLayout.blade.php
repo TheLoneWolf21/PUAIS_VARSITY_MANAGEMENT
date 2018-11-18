@@ -104,7 +104,7 @@
                             <i class="fas fa-clipboard"></i><span class="text">Result</span>
 
                         </li>
-                        <li onclick="location.href='{{ url('adminlibrary') }}'" class="{{ Request::is('adminlibrary') ? 'active' : '' }}">
+                        <li onclick="location.href='{{ url('adminlibrary') }}'" class="{{ Request::is('adminlibrary') || Request::is('adminlibrary_add') ? 'active' : '' }}">
                             <i class="fas fa-book"></i><span class="text">Library</span>
 
                         </li>
@@ -136,7 +136,7 @@
 
 
                         </li>
-                        <li onclick="location.href='{{ url('stuenrollment') }}'" class="{{ Request::is('stuenrollment') ? 'active' : '' }}">
+                        <li onclick="location.href='{{ url('studentrollment') }}'" class="{{ Request::is('stuenrollment') ? 'active' : '' }}">
 
                             <i class="fas fa-plus"></i><span class="text">Enrollment</span>
 

@@ -59,22 +59,8 @@ Admin | Student
                 @yield('adminstu_data')
              <!-- YIELDING DATA -->
                 
-                
-                
-                <div class="clearfix"></div>
-                <ul class="pagination pull-left">
-                    <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left" style="height: 20px;"></span></a></li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-chevron-right" style="height: 20px;"></span></a></li>
-                </ul>
-
-
-
             </div>
+            @yield('page_number')
         </div>
     </div>
 

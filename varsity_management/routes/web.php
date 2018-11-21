@@ -55,3 +55,10 @@ Route::get('/adminsection_advisor','login_controller@adminsection_advisor');
 Route::get('/adminmail','login_controller@adminmailview');
 Route::get('/adminnotice','login_controller@adminnoticeview');
 Route::get('/adminsetting','login_controller@adminsettingview');
+
+//Temp routes
+Route::get('/stuenroll','student_controller@subject_enrollment_data');
+Route::get('/stu_pending','student_controller@stu_pending_subject');
+Route::get('/stu_approved','student_controller@stu_approved_subject');
+Route::get('/stu_declined','student_controller@stu_declined_subject');
+

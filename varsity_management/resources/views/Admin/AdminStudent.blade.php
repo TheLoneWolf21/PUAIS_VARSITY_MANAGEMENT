@@ -25,7 +25,12 @@ Admin | Student
     <div class="container">
 
         <h3 style="margin: 0;float: left;">Section: C6B</h3>
-        <ul style="margin: 0;float: right; "><li>Regular: 47</li>    <li>Retake: 5</li>   <li>Recourse: 2</li> <li>Total: 54</li></ul>
+        <ul style="margin: 0;float: right; ">
+            <li>Regular: 47</li>
+            <li>Retake: 5</li>
+            <li>Recourse: 2</li>
+            <li>Total: 54</li>
+        </ul>
         <br />
         <br />
         <ul class="nav nav-tabs">
@@ -57,8 +62,8 @@ Admin | Student
 
             <div class="col-md-12">
                 @yield('adminstu_data')
-             <!-- YIELDING DATA -->
-                
+                <!-- YIELDING DATA -->
+
             </div>
             @yield('page_number')
         </div>

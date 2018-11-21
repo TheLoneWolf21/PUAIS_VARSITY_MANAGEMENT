@@ -136,7 +136,7 @@
 
 
                         </li>
-                        <li onclick="location.href='{{ url('studentrollment') }}'" class="{{ Request::is('stuenrollment') ? 'active' : '' }}">
+                        <li onclick="location.href='{{ url('stuenroll') }}'" class="{{ Request::is('stuenroll') || Request::is('stu_pending') || Request::is('stu_approved') || Request::is('stu_declined') ? 'active' : '' }}">
 
                             <i class="fas fa-plus"></i><span class="text">Enrollment</span>
 

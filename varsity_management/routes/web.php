@@ -70,3 +70,8 @@ Route::get('/stu_declined','student_controller@stu_declined_subject');
 Route::get('/stu_semester_overview','student_controller@stu_semester_overview');
 Route::get('/stu_result_view','student_controller@stu_result_view');
 // Student result end
+
+//Teacher Student
+Route::get('/view_students','teacher_controller@student_view');
+Route::get('/teacher_pending','teacher_controller@pending_request');
+

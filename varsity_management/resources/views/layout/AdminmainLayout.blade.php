@@ -85,7 +85,7 @@
                             <i class="fas fa-user"></i><span class="text">Student</span>
 
                         </li>
-                        <li onclick="location.href='{{ url('admincourse') }}'" class="{{ Request::is('admincourse') ? 'active' : '' }}">
+                        <li onclick="location.href='{{ url('admincourse') }}'" class="{{ Request::is('admincourse') || Request::is('view_students') ? 'active' : '' }}">
 
                             <i class="fab fa-discourse"></i> <span class="text">Course</span>
 
@@ -153,7 +153,7 @@
 
 
                         </li>
-                        <li onclick="location.href='{{ url('teacherpendingrequest') }}'" class="{{ Request::is('teacherpendingrequest') ? 'active' : '' }}">
+                        <li onclick="location.href='{{ url('teacher_pending') }}'" class="{{ Request::is('teacher_pending') ? 'active' : '' }}">
 
                             <i class="fas fa-pen-alt"></i><span class="text">Pending Request</span>
 

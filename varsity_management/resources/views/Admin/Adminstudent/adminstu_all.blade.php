@@ -1,5 +1,14 @@
 @extends('Admin.AdminStudent')
 @section('adminstu_data')
+<style>
+thead tr:nth-child(1) th {
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+</style>
 <div class="table-responsive" style="overflow-y:auto ; height: 73%;">
 
 

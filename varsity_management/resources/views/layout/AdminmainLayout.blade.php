@@ -100,7 +100,7 @@
                             <i class="fas fa-object-group"></i><span class="text">Routine</span>
 
                         </li>
-                        <li onclick="location.href='{{ url('adminresult') }}'" class="{{ Request::is('adminresult') ? 'active' : '' }}">
+                        <li onclick="location.href='{{ url('adminresult') }}'" class="{{ Request::is('adminresult')|| Request::is('stu_semester_overview')|| Request::is('stu_result_view') ? 'active' : '' }}">
                             <i class="fas fa-clipboard"></i><span class="text">Result</span>
 
                         </li>

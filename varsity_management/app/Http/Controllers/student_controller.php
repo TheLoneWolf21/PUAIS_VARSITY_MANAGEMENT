@@ -23,4 +23,12 @@ class student_controller extends Controller
     {
         return view("Student.studentenrollment.stuenrollment_declined");
     }
+    public function stu_semester_overview()
+    {
+        return view ("Student.studentresult.stu_semester_overview");
+    }
+    public function stu_result_view()
+    {
+        return view ("Student.studentresult.stu_result_view");
+    }
 }

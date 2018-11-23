@@ -228,5 +228,5 @@
     </div>
     @endsection
     @section('enroll_button')
-   <center> <button type="button" class="btn btn-primary" style="float: none;margin-top: 4px;" data-toggle="modal" data-target="#myModal">Enroll</button></center>
+    <center> <button type="button" class="btn btn-primary" style="float: none;margin-top: 4px;" data-toggle="modal" data-target="#myModal">Enroll</button></center>
     @endsection

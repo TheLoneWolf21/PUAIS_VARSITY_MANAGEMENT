@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/login','login_controller@loginview');
-Route::get('/admin','login_controller@adminview');
+Route::get('/dash','login_controller@adminview');
 
 //Admin Student
 
@@ -75,3 +75,8 @@ Route::get('/stu_result_view','student_controller@stu_result_view');
 Route::get('/view_students','teacher_controller@student_view');
 Route::get('/teacher_pending','teacher_controller@pending_request');
 
+//Teacher student end
+
+//user controlling
+Route::get('/get_user','usercontroller@get_user');
+Route::get('/logout','usercontroller@logout');

@@ -1,3 +1,5 @@
+@if(Session::has('user_name'))
+
 <html>
 
 <head>
@@ -47,7 +49,7 @@
                 </li>
                 <li style="margin-left: 4px;"><i class="fas fa-user"></i>
                 </li>
-                <li><i class="fa fa-power-off" id="poweroff"></i></li>
+                <li onclick="window.location.href='/logout'"><i class="fa fa-power-off" id="poweroff"></i></li>
             </ul>
 
 
@@ -73,98 +75,132 @@
                 <!-- options with logo -->
                 <div class="optionsSide">
                     <ul class="sideul">
-                        <li onclick="location.href='{{ url('admin') }}'" class="{{ Request::is('admin') ? 'active' : '' }}">
+                        <li onclick="location.href='{{ url('/dash') }}'" class="{{ Request::is('dash') ? 'active' : '' }}">
 
                             <i class="fab fa-dashcube"></i><span class="text">Dashboard</span>
 
 
 
                         </li>
+                        @if(Session::get('admin') == 1) 
                         <li onclick="location.href='{{ url('adminstu') }}'" class="{{ Request::is('adminstu') || Request::is('adminstu_retake') || Request::is('adminstu_recourse') || Request::is('adminstu_regular')? 'active' : '' }}">
 
                             <i class="fas fa-user"></i><span class="text">Student</span>
 
                         </li>
+                        @endif
+                        @if(Session::get('admin') == 1) 
                         <li onclick="location.href='{{ url('admincourse') }}'" class="{{ Request::is('admincourse') || Request::is('view_students') ? 'active' : '' }}">
 
                             <i class="fab fa-discourse"></i> <span class="text">Course</span>
 
                         </li>
+                        @endif
+                        @if(Session::get('admin') == 1) 
                         <li onclick="location.href='{{ url('adminteacher') }}'" class="{{ Request::is('adminteacher') || Request::is('adminteacher_dean') || Request::is('adminteacher_professors') || Request::is('adminteacher_lecturers')  ? 'active' : '' }}">
                             <i class="fas fa-chalkboard-teacher"></i><span class="text">Teacher</span>
                         </li>
+                        @endif
+                        @if(Session::get('admin') == 1) 
                         <li onclick="location.href='{{ url('adminsession') }}'" class="{{ Request::is('adminsession') || Request::is('adminsession_edit') ? 'active' : '' }}">
                             <i class="fas fa-adjust"></i><span class="text">Session</span>
                         </li>
+                        @endif
+                        @if(Session::get('admin') == 1 || Session::get('student') == 1) 
                         <li onclick="location.href='{{ url('adminroutine') }}'" class="{{ Request::is('adminroutine') ? 'active' : '' }}">
                             <i class="fas fa-object-group"></i><span class="text">Routine</span>
 
                         </li>
+                        @endif
+                        @if(Session::get('student') == 1 || Session::get('admin') == 1) 
                         <li onclick="location.href='{{ url('adminresult') }}'" class="{{ Request::is('adminresult')|| Request::is('stu_semester_overview')|| Request::is('stu_result_view') ? 'active' : '' }}">
                             <i class="fas fa-clipboard"></i><span class="text">Result</span>
 
                         </li>
+                        @endif
+                        @if(Session::get('admin') == 1) 
                         <li onclick="location.href='{{ url('adminlibrary') }}'" class="{{ Request::is('adminlibrary') || Request::is('adminlibrary_add') ? 'active' : '' }}">
                             <i class="fas fa-book"></i><span class="text">Library</span>
 
                         </li>
+                       @endif
+                        @if(Session::get('student') == 1)
                         <li onclick="location.href='{{ url('admincoursefee') }}'" class="{{ Request::is('admincoursefee') ? 'active' : '' }}">
                             <i class="fas fa-dollar-sign"></i><span class="text">Course Fee</span>
 
                         </li>
+                        @endif
+                        @if(Session::get('admin') == 1) 
                         <li onclick="location.href='{{ url('adminsection') }}'" class="{{ Request::is('adminsection') || Request::is('adminsection_edit') || Request::is('adminsection_advisor') ? 'active' : '' }}">
 
                             <i class="fas fa-list"></i><span class="text">Section</span>
 
 
                         </li>
+                       @endif
+                        @if(Session::get('admin') == 1 || Session::get('teacher') == 1 ) 
                         <li onclick="location.href='{{ url('adminmail') }}'" class="{{ Request::is('adminmail') ? 'active' : '' }}">
 
                             <i class="fas fa-mail-bulk"></i> <span class="text">Mail/SMS</span>
 
 
                         </li>
+                        @endif
+                        @if(Session::get('admin') == 1 || Session::get('student') == 1) 
                         <li onclick="location.href='{{ url('adminnotice') }}'" class="{{ Request::is('adminnotice') ? 'active' : '' }}">
 
                             <i class="fas fa-bell"></i><span class="text">Notice</span>
 
 
                         </li>
+                        @endif
+                        @if(Session::get('admin') == 1) 
                         <li onclick="location.href='{{ url('adminsetting') }}'" class="{{ Request::is('adminsetting') ? 'active' : '' }}">
 
                             <i class="	fas fa-cogs"></i><span class="text">Setting</span>
 
 
                         </li>
+                        @endif
+                        @if(Session::get('student') == 1) 
                         <li onclick="location.href='{{ url('stuenroll') }}'" class="{{ Request::is('stuenroll') || Request::is('stu_pending') || Request::is('stu_approved') || Request::is('stu_declined') ? 'active' : '' }}">
 
                             <i class="fas fa-plus"></i><span class="text">Enrollment</span>
 
                         </li>
+                        @endif
+                        @if(Session::get('student') == 1) 
                         <li onclick="location.href='{{ url('stuadvisor') }}'" class="{{ Request::is('stuadvisor') ? 'active' : '' }}">
 
                             <i class="fab fa-tripadvisor"></i><span class="text">Advisor</span>
 
 
                         </li>
+                        @endif
+                        @if(Session::get('teacher') == 1) 
                         <li onclick="location.href='{{ url('teacherrequestsubject') }}'" class="{{ Request::is('teacherrequestsubject') ? 'active' : '' }}">
 
                             <i class="fas fa-book-open"></i><span class="text">Request Subject</span>
 
 
                         </li>
+                        @endif
+                        @if(Session::get('teacher') == 1) 
                         <li onclick="location.href='{{ url('teacher_pending') }}'" class="{{ Request::is('teacher_pending') ? 'active' : '' }}">
 
                             <i class="fas fa-pen-alt"></i><span class="text">Pending Request</span>
 
 
                         </li>
+                        @endif
+                        @if(Session::get('student') == 1) 
                         <li onclick="location.href='{{ url('stupayment') }}'" class="{{ Request::is('stupayment') ? 'active' : '' }}">
 
                             <i class="fas fa-credit-card"></i><span class="text">Payment</span>
 
 
                         </li>
+                        @endif
 
 
                     </ul>
@@ -187,3 +223,8 @@
 </body>
 
 </html>
+@else
+<script>
+    window.location = "/login";
+</script>
+@endif

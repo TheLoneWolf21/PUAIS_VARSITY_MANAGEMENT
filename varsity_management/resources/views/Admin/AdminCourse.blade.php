@@ -4,6 +4,18 @@
 Admin | Course
 @endsection
 @section('rightcontent')
+<style>
+    .drop {
+        width: 230px;
+        text-align: center;
+        margin-top: 4px;
+        height: 30px;
+        background: white;
+        
+    }
+    
+
+</style>
 <link rel="stylesheet" href="/css/admincourseview.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -55,6 +67,7 @@ Admin | Course
                     <div class="modal-dialog">
 
                         <!-- Modal content-->
+                        <form action="/add_subject" type="post">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -62,16 +75,31 @@ Admin | Course
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
+                                    <select class="drop" name="semester">
+                                        <option value="0">----Select Semester----</option>
+                                        <option value="1">1<sup>st</sup> Semester</option>
+                                        <option value="2">2<sup>nd</sup> Semester</option>
+                                        <option value="3">3<sup>rd</sup> Semester</option>
+                                        <option value="4">4<sup>th</sup> Semester</option>
+                                        <option value="5">5<sup>th</sup> Semester</option>
+                                        <option value="6">6<sup>th</sup> Semester</option>
+                                        <option value="7">7<sup>th</sup> Semester</option>
+                                        <option value="8">8<sup>th</sup> Semester</option>
+                                    </select>
+                                    <br />
+                                    <br />
                                     <label for="usr">Add course name:</label>
-                                    <input type="text" class="form-control" id="usr">
+                                    <input type="text" class="form-control" id="usr" name="subject_name">
+                                    <label for="usr">Course code :</label>
+                                    <input type="text" class="form-control" id="usr" name="subject_code">
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-success">Add</button>
+                                <button type="submit" class="btn btn-success">Add</button>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                             </div>
                         </div>
-
+                            </form>
                     </div>
                 </div>
 

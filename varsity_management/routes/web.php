@@ -10,11 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::group(['middleware' => ['usercontrollermiddleware']], function () {
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/login','login_controller@loginview');
+
 Route::get('/dash','login_controller@adminview');
 
 //Admin Student
@@ -78,5 +78,9 @@ Route::get('/teacher_pending','teacher_controller@pending_request');
 //Teacher student end
 
 //user controlling
+
+
+});
 Route::get('/get_user','usercontroller@get_user');
+Route::get('/login','login_controller@loginview');
 Route::get('/logout','usercontroller@logout');

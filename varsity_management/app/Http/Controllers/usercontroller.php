@@ -20,16 +20,22 @@ class usercontroller extends Controller
         $user_name = Input::get('Username');
         $password = Input::get('Password');
         $user = DB::table('users')
-            ->where('user_name',$user_name)
+            ->where('user_id',$user_name)
             ->where('password',$password)
             ->get();
         
         if(count($user) == 1)
         {
-            Session::put('user_name',$user_name);
-            Session::put('password',$password);
+           // Session::put('user_name',$user_name);
+           // Session::put('password',$password);
             foreach($user as $role)
             {
+                if($role->active == 1 && $role->disabled == 0)
+                {
+                    Session::put('user_name',$user_name);
+                    Session::put('password',$password);
+                    
+                    
                 if($role->admin == 1)
                 {
                     $user_role_admin = 1;
@@ -50,16 +56,17 @@ class usercontroller extends Controller
                     $user_role_student =1;
                     Session::put('student',$user_role_student);
                 }
+                }
+                else
+                    return "Sorry, this user is blocked";
             }
-            
-            
-            
-            
             
             return redirect('/dash');
         }
         else 
-            return view('login');
+        {
+            return redirect('/login');
+    }
     }
     public function logout()
     {

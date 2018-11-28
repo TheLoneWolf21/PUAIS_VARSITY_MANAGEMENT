@@ -90,7 +90,7 @@
                         </li>
                         @endif
                         @if(Session::get('admin') == 1)
-                        <li onclick="location.href='{{ url('admincourse') }}'" class="{{ Request::is('admincourse') || Request::is('view_students') ? 'active' : '' }}">
+                        <li onclick="location.href='{{ url('admincourse?semester=1') }}'" class="{{ Request::is('admincourse') || Request::is('view_students') ? 'active' : '' }}">
 
                             <i class="fab fa-discourse"></i> <span class="text">Course</span>
 

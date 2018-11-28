@@ -79,8 +79,11 @@ Route::get('/teacher_pending','teacher_controller@pending_request');
 
 //user controlling
 
-
+Route::post('/add_subject','querycontroller@admin_sub_insert');
 });
 Route::get('/get_user','usercontroller@get_user');
 Route::get('/login','login_controller@loginview');
 Route::get('/logout','usercontroller@logout');
+
+
+

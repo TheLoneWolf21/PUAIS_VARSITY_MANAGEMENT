@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
+use DB;
 
 class login_controller extends Controller
 {
@@ -37,7 +39,13 @@ class login_controller extends Controller
     
     public function admincourseview()
     {
-        return view('Admin.admincourse.admincourse_all');
+        $semester_title = Input::get('semester');
+        $section= DB::table('subjects')->distinct()->pluck('semester');
+        $data=DB::table('subjects')
+                        ->where('semester',Input::get('semester'))
+                        ->pluck('subject_name');
+  
+        return view('Admin.admincourse.admincourse_all')->with('data',$data)->with('section',$section)->with('semester_title',$semester_title);
     }
     
     //Admin Teahcer view 

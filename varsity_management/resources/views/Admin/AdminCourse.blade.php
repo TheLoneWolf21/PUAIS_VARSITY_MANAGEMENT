@@ -27,7 +27,7 @@ Admin | Course
 
 <div class="coursebody">
     <div class="container">
-        <h3 style="margin: 0;float: left;">Section: C6B</h3>
+        <h3 style="margin: 0;float: left;">Semester: @yield('semester_title')</h3>
         <button type="button" class="btn btn-primary" style="float: right" data-toggle="modal" data-target="#myModal">Add Course</button>
         <br />
         <br />
@@ -36,9 +36,7 @@ Admin | Course
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Section: <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">C6A</a></li>
-                    <li><a href="#">C6B</a></li>
-                    <li><a href="#">C6C</a></li>
+                    @yield('section_data')
                 </ul>
             </li>
 
@@ -67,39 +65,53 @@ Admin | Course
                     <div class="modal-dialog">
 
                         <!-- Modal content-->
-                        <form action="/add_subject" type="post">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Add Course</h4>
-                            </div>
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <select class="drop" name="semester">
-                                        <option value="0">----Select Semester----</option>
-                                        <option value="1">1<sup>st</sup> Semester</option>
-                                        <option value="2">2<sup>nd</sup> Semester</option>
-                                        <option value="3">3<sup>rd</sup> Semester</option>
-                                        <option value="4">4<sup>th</sup> Semester</option>
-                                        <option value="5">5<sup>th</sup> Semester</option>
-                                        <option value="6">6<sup>th</sup> Semester</option>
-                                        <option value="7">7<sup>th</sup> Semester</option>
-                                        <option value="8">8<sup>th</sup> Semester</option>
-                                    </select>
-                                    <br />
-                                    <br />
-                                    <label for="usr">Add course name:</label>
-                                    <input type="text" class="form-control" id="usr" name="subject_name">
-                                    <label for="usr">Course code :</label>
-                                    <input type="text" class="form-control" id="usr" name="subject_code">
+                        <form action="/add_subject" method="post">
+                            {{csrf_field()}}
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Add Course</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <select class="drop" name="semester" id="value_of_semester">
+                                            <option value="0">----Select Semester----</option>
+                                            <option value="1">1<sup>st</sup> Semester</option>
+                                            <option value="2">2<sup>nd</sup> Semester</option>
+                                            <option value="3">3<sup>rd</sup> Semester</option>
+                                            <option value="4">4<sup>th</sup> Semester</option>
+                                            <option value="5">5<sup>th</sup> Semester</option>
+                                            <option value="6">6<sup>th</sup> Semester</option>
+                                            <option value="7">7<sup>th</sup> Semester</option>
+                                            <option value="8">8<sup>th</sup> Semester</option>
+                                        </select>
+                                        <br />
+                                        <br />
+                                        <label for="usr">Add course name:</label>
+                                        <input type="text" class="form-control" id="usr" name="subject_name" required>
+                                        <label for="usr">Course code :</label>
+                                        <input type="text" class="form-control" id="usr" name="subject_code" required>
+                                        <div id="errmsg" style="display: none; background: #facccc;color: #f04444;margin-top: 4px;padding: 4px 4px 4px 4px;">Please select semester</div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-success" id="add_subject_button" onclick="control_semester()">Add</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                 </div>
                             </div>
-                            <div class="modal-footer">
-                                <button type="submit" class="btn btn-success">Add</button>
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                            </form>
+                            <script>
+                                function control_semester() {
+                                    var selector = document.getElementById('value_of_semester');
+                                    if (selector.value === '0') {
+                                        document.getElementById('errmsg').style.display = "block";
+                                       
+
+                                    } else {
+                                        document.getElementById('add_subject_button').setAttribute('type', 'submit');
+                                    }
+                                }
+                            </script>
+                        </form>
                     </div>
                 </div>
 

@@ -14,10 +14,11 @@ class CreateTeachersTable extends Migration
     public function up()
     {
         Schema::create('teachers', function (Blueprint $table) {
-            $table->integer('teacher_id')->unsigned();
+            $table->bigInteger('teacher_id')->unsigned();
             $table->foreign('teacher_id')->references('user_id')->on('users');
             $table->binary('img');
             $table->string('name');
+            $table->string('email');
             $table->boolean('dean');
             $table->boolean('professor');
             $table->boolean('associate');

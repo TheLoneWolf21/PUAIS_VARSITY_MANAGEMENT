@@ -3,6 +3,7 @@
 @section('title')
 Admin | Course
 @endsection
+
 @section('rightcontent')
 <style>
     .drop {
@@ -20,7 +21,7 @@ Admin | Course
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+@yield('success')
 <center>
     <p style="font-family: Actor;font-size: 35px;margin: 0;">Course</p>
 </center>
@@ -34,7 +35,7 @@ Admin | Course
         <ul class="nav nav-tabs">
 
             <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Section: <span class="caret"></span></a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Semester: <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     @yield('section_data')
                 </ul>

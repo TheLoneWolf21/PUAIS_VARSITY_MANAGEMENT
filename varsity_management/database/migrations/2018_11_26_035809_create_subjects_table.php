@@ -17,7 +17,7 @@ class CreateSubjectsTable extends Migration
             $table->increments('subject_id')->unique();
             $table->string('subject_name');
             $table->integer('semester');
-            $table->integer('subject_code');
+            $table->string('subject_code');
         });
     }
 

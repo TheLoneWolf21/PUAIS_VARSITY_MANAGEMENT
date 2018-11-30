@@ -1,9 +1,8 @@
-
 <html>
 
 <head>
     <title>@yield('title')</title>
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Wahid Sakib">
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
@@ -104,6 +103,11 @@
                         @if(Session::get('admin') == 1)
                         <li onclick="location.href='{{ url('adminsession') }}'" class="{{ Request::is('adminsession') || Request::is('adminsession_edit') ? 'active' : '' }}">
                             <i class="fas fa-adjust"></i><span class="text">Session</span>
+                        </li>
+                        @endif
+                         @if(Session::get('admin') == 1)
+                        <li onclick="location.href='{{ url('adminsubject') }}'" class="{{ Request::is('adminsubject_overview') || Request::is('adminsubject_edit') ? 'active' : '' }}">
+                            <i class="fas fa-adjust"></i><span class="text">Subject</span>
                         </li>
                         @endif
                         @if(Session::get('admin') == 1 || Session::get('student') == 1)
@@ -231,4 +235,3 @@
 </body>
 
 </html>
-

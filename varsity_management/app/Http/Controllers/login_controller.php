@@ -40,10 +40,10 @@ class login_controller extends Controller
     public function admincourseview()
     {
         $semester_title = Input::get('semester');
-        $section= DB::table('subjects')->distinct()->pluck('semester');
+        $section= DB::table('subjects')->distinct()->orderBy('semester','ASC')->pluck('semester');
         $data=DB::table('subjects')
                         ->where('semester',Input::get('semester'))
-                        ->pluck('subject_name');
+                        ->get();
   
         return view('Admin.admincourse.admincourse_all')->with('data',$data)->with('section',$section)->with('semester_title',$semester_title);
     }
@@ -66,6 +66,17 @@ class login_controller extends Controller
         return view('Admin.adminteacher.adminteacher_lecturers');
     }
     //Admin Teahcer view end
+    //Admin subjects
+    public function adminsubject()
+    {
+        return view('Admin.adminsubject.adminsubject_overview');
+    }
+    public function adminsubject_edit()
+    {
+        return view('Admin.adminsubject.adminsubject_edit');
+    }
+    //Admin subjects ends
+    
     public function adminroutineview()
     {
         return view('Admin.AdminRoutine');
@@ -83,7 +94,8 @@ class login_controller extends Controller
     }
            public function adminsession_edit()
     {
-        return view('Admin.adminsession.adminsession_edit');
+               $data = DB::table('teachers')->select(array('teacher_id','name'))->get();
+               return view('Admin.adminsession.adminsession_edit')->with('teacher',$data);
     }
     //ADmin session end
     

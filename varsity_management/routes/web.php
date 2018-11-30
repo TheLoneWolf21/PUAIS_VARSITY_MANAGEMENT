@@ -27,6 +27,8 @@ Route::get('/adminstu_regular','login_controller@adminstu_regular');
 //Admin Student End
 //Admin Course
 Route::get('/admincourse','login_controller@admincourseview');
+Route::post('/delete_admin_course_data','querycontroller@delete_admin_course_data');//Delete admin course
+Route::post('/admin_update_course','querycontroller@update_admin_course_data');
 //Admin Course end
 //Admin Teacher
 Route::get('/adminteacher','login_controller@adminteacherview');
@@ -35,6 +37,10 @@ Route::get('/adminteacher_professors','login_controller@adminteacher_professors'
 Route::get('/adminteacher_lecturers','login_controller@adminteacher_lecturers');
 
 //Admin Teacher End
+//Admin subject
+Route::get('/adminsubject','login_controller@adminsubject');
+Route::get('/adminsubject_edit','login_controller@adminsubject_edit');
+ //Admin subjcet end
 Route::get('/adminroutine','login_controller@adminroutineview');
 //Admin Result
 Route::get('/adminresult','login_controller@adminresultview');
@@ -78,12 +84,16 @@ Route::get('/teacher_pending','teacher_controller@pending_request');
 //Teacher student end
 
 //user controlling
-
 Route::post('/add_subject','querycontroller@admin_sub_insert');
+    
+    
+//temp insert
+Route::post('/temp_insert','querycontroller@temp_insert');
 });
-Route::get('/get_user','usercontroller@get_user');
-Route::get('/login','login_controller@loginview');
-Route::get('/logout','usercontroller@logout');
+Route::get('/get_user','usercontroller@get_user'); // fetching user role and data
+Route::get('/login','login_controller@loginview'); //for login
+Route::get('/logout','usercontroller@logout'); //for logout
+Route::get('/delete_admin_course_data','querycontroller@delete_admin_course_data');//Delete admin course
 
-
-
+Route::get('/image','querycontroller@imageupload');
+Route::post('/store','querycontroller@storeimage');

@@ -1,4 +1,16 @@
 @extends('Admin.AdminSession')
+@section('ongoing_session')
+    @foreach($ongoing as $d)
+        @if($d->month == 0)
+            {{'Janaury'.' '.$d->year}}
+            @else
+            {{'June'.' '.$d->year}}
+        @endif
+    @endforeach
+@endsection
+@section('total_student')
+    {{$total}}
+@endsection
 @section('adminsession_data')
 <style>
 thead tr:nth-child(1) th {

@@ -1,4 +1,16 @@
 @extends('Admin.AdminSession')
+@section('ongoing_session')
+    @foreach($ongoing as $d)
+        @if($d->month == 0)
+            {{'Janaury'.' '.$d->year}}
+            @else
+            {{'June'.' '.$d->year}}
+        @endif
+    @endforeach
+@endsection
+@section('total_student')
+    {{$total}}
+@endsection
 @section('adminsession_data')
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -34,9 +46,12 @@
   top: -20;
   z-index: 10;
 }
-
-
 </style>
+@if($success = Session::get('successfulsectioninsertion'))
+<div class="alert alert-success">
+    <strong>Success!</strong>&nbsp; Section successfully added.
+</div>
+@endif
 <form action="/temp_insert" method="post">
     {{csrf_field()}}
     <h1>Add Session</h1>
@@ -96,7 +111,7 @@
                                 <td><input type="checkbox" name="section[]" value="C1B"></td>
                                 <td>C1B</td>
                                 <td><select name="C1B">
-                                      @foreach($teacher as $d)
+                                        @foreach($teacher as $d)
                                         <option value="{{$d->teacher_id}}">{{$d->name}} </option>
                                         @endforeach
                                     </select>
@@ -106,7 +121,7 @@
                                 <td><input type="checkbox" name="section[]" value="C1C"></td>
                                 <td>C1C</td>
                                 <td><select name="C1C">
-                                       @foreach($teacher as $d)
+                                        @foreach($teacher as $d)
                                         <option value="{{$d->teacher_id}}">{{$d->name}} </option>
                                         @endforeach
                                     </select>
@@ -126,7 +141,7 @@
                                 <td><input type="checkbox" name="section[]" value="C2"></td>
                                 <td>C2</td>
                                 <td><select name="C2">
-                                       @foreach($teacher as $d)
+                                        @foreach($teacher as $d)
                                         <option value="{{$d->teacher_id}}">{{$d->name}} </option>
                                         @endforeach
                                     </select>
@@ -136,7 +151,7 @@
                                 <td><input type="checkbox" name="section[]" value="C2A"></td>
                                 <td>C2A</td>
                                 <td><select name="C2A">
-                                       @foreach($teacher as $d)
+                                        @foreach($teacher as $d)
                                         <option value="{{$d->teacher_id}}">{{$d->name}} </option>
                                         @endforeach
                                     </select>
@@ -146,7 +161,7 @@
                                 <td><input type="checkbox" name="section[]" value="C2B"></td>
                                 <td>C2B</td>
                                 <td><select name="C2B">
-                                       @foreach($teacher as $d)
+                                        @foreach($teacher as $d)
                                         <option value="{{$d->teacher_id}}">{{$d->name}} </option>
                                         @endforeach
                                     </select>
@@ -156,7 +171,7 @@
                                 <td><input type="checkbox" name="section[]" value="C2C"></td>
                                 <td>C2C</td>
                                 <td><select name="C2C">
-                                      @foreach($teacher as $d)
+                                        @foreach($teacher as $d)
                                         <option value="{{$d->teacher_id}}">{{$d->name}} </option>
                                         @endforeach
                                     </select>
@@ -166,7 +181,7 @@
                                 <td><input type="checkbox" name="section[]" value="C2D"></td>
                                 <td>C2D</td>
                                 <td><select name="C2D">
-                                       @foreach($teacher as $d)
+                                        @foreach($teacher as $d)
                                         <option value="{{$d->teacher_id}}">{{$d->name}} </option>
                                         @endforeach
                                     </select>
@@ -176,7 +191,7 @@
                                 <td><input type="checkbox" name="section[]" value="C3"></td>
                                 <td>C3</td>
                                 <td><select name="C3">
-                                       @foreach($teacher as $d)
+                                        @foreach($teacher as $d)
                                         <option value="{{$d->teacher_id}}">{{$d->name}} </option>
                                         @endforeach
                                     </select>
@@ -206,7 +221,7 @@
                                 <td><input type="checkbox" name="section[]" value="C1C"></td>
                                 <td>C3C</td>
                                 <td><select name="C3C">
-                                       @foreach($teacher as $d)
+                                        @foreach($teacher as $d)
                                         <option value="{{$d->teacher_id}}">{{$d->name}} </option>
                                         @endforeach
                                     </select>
@@ -216,7 +231,7 @@
                                 <td><input type="checkbox" name="section[]" value="C1D"></td>
                                 <td>C3D</td>
                                 <td><select name="C3D">
-                                       @foreach($teacher as $d)
+                                        @foreach($teacher as $d)
                                         <option value="{{$d->teacher_id}}">{{$d->name}} </option>
                                         @endforeach
                                     </select>
@@ -226,7 +241,7 @@
                                 <td><input type="checkbox" name="section[]" value="C4"></td>
                                 <td>C4</td>
                                 <td><select name="C4">
-                                       @foreach($teacher as $d)
+                                        @foreach($teacher as $d)
                                         <option value="{{$d->teacher_id}}">{{$d->name}} </option>
                                         @endforeach
                                     </select>
@@ -246,7 +261,7 @@
                                 <td><input type="checkbox" name="section[]" value="C4B"></td>
                                 <td>C4B</td>
                                 <td><select name="C4B">
-                                       @foreach($teacher as $d)
+                                        @foreach($teacher as $d)
                                         <option value="{{$d->teacher_id}}">{{$d->name}} </option>
                                         @endforeach
                                     </select>
@@ -256,7 +271,7 @@
                                 <td><input type="checkbox" name="section[]" value="C1C"></td>
                                 <td>C4C</td>
                                 <td><select name="C4C">
-                                       @foreach($teacher as $d)
+                                        @foreach($teacher as $d)
                                         <option value="{{$d->teacher_id}}">{{$d->name}} </option>
                                         @endforeach
                                     </select>
@@ -266,7 +281,7 @@
                                 <td><input type="checkbox" name="section[]" value="C4D"></td>
                                 <td>C4D</td>
                                 <td><select name="C4D">
-                                       @foreach($teacher as $d)
+                                        @foreach($teacher as $d)
                                         <option value="{{$d->teacher_id}}">{{$d->name}} </option>
                                         @endforeach
                                     </select>
@@ -276,7 +291,7 @@
                                 <td><input type="checkbox" name="section[]" value="C5"></td>
                                 <td>C5</td>
                                 <td><select name="C5">
-                                       @foreach($teacher as $d)
+                                        @foreach($teacher as $d)
                                         <option value="{{$d->teacher_id}}">{{$d->name}} </option>
                                         @endforeach
                                     </select>
@@ -326,7 +341,7 @@
                                 <td><input type="checkbox" name="section[]" value="C6"></td>
                                 <td>C6</td>
                                 <td><select name="C6">
-                                       @foreach($teacher as $d)
+                                        @foreach($teacher as $d)
                                         <option value="{{$d->teacher_id}}">{{$d->name}} </option>
                                         @endforeach
                                     </select>
@@ -336,7 +351,7 @@
                                 <td><input type="checkbox" name="section[]" value="C6A"></td>
                                 <td>C6A</td>
                                 <td><select name="C6A">
-                                       @foreach($teacher as $d)
+                                        @foreach($teacher as $d)
                                         <option value="{{$d->teacher_id}}">{{$d->name}} </option>
                                         @endforeach
                                     </select>
@@ -366,7 +381,7 @@
                                 <td><input type="checkbox" name="section[]" value="C6D"></td>
                                 <td>C6D</td>
                                 <td><select name="C6D">
-                                       @foreach($teacher as $d)
+                                        @foreach($teacher as $d)
                                         <option value="{{$d->teacher_id}}">{{$d->name}} </option>
                                         @endforeach
                                     </select>
@@ -406,7 +421,7 @@
                                 <td><input type="checkbox" name="section[]" value="C7C"></td>
                                 <td>C7C</td>
                                 <td><select name="C7C">
-                                       @foreach($teacher as $d)
+                                        @foreach($teacher as $d)
                                         <option value="{{$d->teacher_id}}">{{$d->name}} </option>
                                         @endforeach
                                     </select>
@@ -416,7 +431,7 @@
                                 <td><input type="checkbox" name="section[]" value="C7D"></td>
                                 <td>C7D</td>
                                 <td><select name="C7D">
-                                       @foreach($teacher as $d)
+                                        @foreach($teacher as $d)
                                         <option value="{{$d->teacher_id}}">{{$d->name}} </option>
                                         @endforeach
                                     </select>
@@ -436,7 +451,7 @@
                                 <td><input type="checkbox" name="section[]" value="C8A"></td>
                                 <td>C8A</td>
                                 <td><select name="C8A">
-                                       @foreach($teacher as $d)
+                                        @foreach($teacher as $d)
                                         <option value="{{$d->teacher_id}}">{{$d->name}} </option>
                                         @endforeach
                                     </select>
@@ -446,7 +461,7 @@
                                 <td><input type="checkbox" name="section[]" value="C8B"></td>
                                 <td>C8B</td>
                                 <td><select name="C8B">
-                                       @foreach($teacher as $d)
+                                        @foreach($teacher as $d)
                                         <option value="{{$d->teacher_id}}">{{$d->name}} </option>
                                         @endforeach
                                     </select>
@@ -456,7 +471,7 @@
                                 <td><input type="checkbox" name="section[]" value="C8C"></td>
                                 <td>C8C</td>
                                 <td><select name="C8C">
-                                       @foreach($teacher as $d)
+                                        @foreach($teacher as $d)
                                         <option value="{{$d->teacher_id}}">{{$d->name}} </option>
                                         @endforeach
                                     </select>
@@ -466,7 +481,7 @@
                                 <td><input type="checkbox" name="section[]" value="C8D"></td>
                                 <td>C8D</td>
                                 <td><select name="C8D">
-                                      @foreach($teacher as $d)
+                                        @foreach($teacher as $d)
                                         <option value="{{$d->teacher_id}}">{{$d->name}} </option>
                                         @endforeach
                                     </select>

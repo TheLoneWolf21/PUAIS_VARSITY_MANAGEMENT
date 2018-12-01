@@ -11,8 +11,8 @@ Admin | Session
 <div class="sessionbody">
     <div class="container">
         <ul style="margin: 0;float: right;padding: 0; ">
-            <li>Ongoing session:    January 2018</li>
-            <li>Total student enrolled: 687</li>
+            <li>Ongoing session: @yield('ongoing_session')</li>
+            <li>Total student enrolled: @yield('total_student')</li>
         </ul>
         <br />
    

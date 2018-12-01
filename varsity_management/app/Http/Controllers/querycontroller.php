@@ -49,12 +49,26 @@ class querycontroller extends Controller
     }
     public function temp_insert()
     {
+        /* 
+            Ei method shompurno session k define kore.Jkhane Admin new ekti session create korbe active korbe and section  select kore dibe.
+        */
+        /*  
+                                            PROCESS 
+            1. prothome admin er kach tke session input niye eita database er session table e year and month 
+               column e insert korbo.ekhane month 0 = january and 1 = june session
+            2. then sessions table er shb session active tab k  0 kore dibo.
+            3. then j session ta active she session k 1 kore dibo.
+            4. admin tke active section nite hbe.
+            5. controllers table er admin er input section gulu k active kore dite hbe.
+        
+        */
+        
+/* PROCESS 1:   admin er kach tke year and month input hishebe neoa holo */
         $year = Input::get('year');
         $month = Input::get('month');
-        $month = $month -1;
-        
-    /* prothome data insert korbo then shb data k inactive korbo.Then desired session k active korbo */
-        //Insert korlam
+        $month = $month -1; //month er value 1 and 2 ashe tai 1 minus kore 0 and 1 kore nilam
+       
+/* PROCESS 2:   sessions table e admin er input insert kora holo */
        DB::table('sessions')->insert(  
         [
             'year'  => $year,
@@ -62,7 +76,7 @@ class querycontroller extends Controller
             'active'=> 0
         ]); 
         
-        //shbai k inactive korbo
+/* PROCESS 3:   sessions table er shb data k 0 kora holo */
         
         $data = DB::table('sessions')->pluck('session_id');
         $inactive_array = array(
@@ -75,7 +89,7 @@ class querycontroller extends Controller
                 ->update($inactive_array);
         }
         
-        //desired session active korbo
+/* PROCESS 4:   Admin er input k active kora holo by putting active=1 */
         $active_array =array(
             'active' => 1
         );
@@ -84,7 +98,49 @@ class querycontroller extends Controller
             ->where('month',$month)
             ->update($active_array);
         
-      /*  
+/* PROCESS 5:   controllers table tke section teacher_id advisor_id shbai k admin er id te transfer kora.active k o 0                 korte hbe admin er id=100. 
+*/    
+        $controllers_data = DB::table('controllers')
+                            ->pluck('controller_id');
+        $update_data =array(
+            'active' => 0,
+            'advisor_id' => 100,
+            'teacher_id' => 100
+        );
+        foreach($controllers_data as $cd)
+        {
+            DB::table('controllers')
+                    ->where('controller_id','=',$cd)
+                    ->update($update_data); 
+        }
+        
+        
+        
+/* PROCESS 6:   selected section onyjayi advisor er id niye nite hbe.then DB te prottekta section onujayi 
+                active column k 1 korte hbe and advisor_id set korte hbe.then ager page e return korbe with
+                success msg.
+*/   
+        
+        $selected_section = Input::get('section');
+        
+        $advisor_id=array();
+        
+        for($i=0; $i<sizeof($selected_section);$i++)
+        {
+            $advisor_id[$i] = Input::get($selected_section[$i]);
+            $data_array =array(
+                'active' => 1,
+                'advisor_id' => $advisor_id[$i]
+            );
+            DB::table('controllers')
+            ->where('section','=',$selected_section[$i])
+            ->update($data_array);  
+        }
+       
+            return back()->with('successfulsectioninsertion','Section added successfully');
+        
+        
+      /*  Ei portion ta just subject add korar jonw
        
         $value_holder =0;
         

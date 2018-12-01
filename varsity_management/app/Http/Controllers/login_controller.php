@@ -90,12 +90,42 @@ class login_controller extends Controller
     //Admin session
        public function adminsessionview()
     {
-        return view('Admin.adminsession.adminsession_overview');
+           /* Admin session er main page jekhane admin session,section add korte parbe */
+           
+           $active = DB::table('sessions')
+                ->where('active',1)
+                ->get();
+           $year;
+           $month;
+           foreach($active as $a)
+           {
+               $year = $a->year;
+               $month = $a->month;
+           }
+           $total = DB::table('sessiondatas')
+                        ->where('year',$year)
+                        ->where('month',$month)
+                        ->count();
+        return view('Admin.adminsession.adminsession_overview')->with('ongoing',$active)->with('total',$total);
     }
            public function adminsession_edit()
     {
+               $active = DB::table('sessions')
+                ->where('active',1)
+               ->get();
+         $year;
+         $month;
+           foreach($active as $a)
+           {
+               $year = $a->year;
+               $month = $a->month;
+           }
+           $total = DB::table('sessiondatas')
+                        ->where('year',$year)
+                        ->where('month',$month)
+                        ->count();
                $data = DB::table('teachers')->select(array('teacher_id','name'))->get();
-               return view('Admin.adminsession.adminsession_edit')->with('teacher',$data);
+               return view('Admin.adminsession.adminsession_edit')->with('teacher',$data)->with('ongoing',$active)->with('total',$total);
     }
     //ADmin session end
     
